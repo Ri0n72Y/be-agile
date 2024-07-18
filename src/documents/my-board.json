@@ -1,0 +1,91 @@
+{
+  "backlog": [
+    {
+      "status": "backlog",
+      "type": "legendary",
+      "key": "cooperative",
+      "title": "cooperative market entity",
+      "description": "Establish a cooperative. Implement distribution according to work within the cooperative, use agile cooperation models to describe and synchronize the work of members, complete production, and have certain externalities as much as possible."
+    },
+    {
+      "status": "backlog",
+      "type": "legendary",
+      "key": "commune",
+      "title": "Develop theory and method driven by agile collaboration",
+      "description": "Promote agile development to agile collaboration, develop theories and model frameworks, and apply them to as many production and life scenarios as possible. a) Accounting and settlement of income and expenditure; b) Rapid integration and synchronization of community status and progress; c) Use AI to assist in organizing goals and quickly achieve consensus; d) Others"
+    }
+  ],
+  "suspend": [
+    {
+      "status": "suspend",
+      "type": "epic",
+      "key": "sr-survivor",
+      "title": "星铁幸存者-银河棒球侠传奇",
+      "description": "根据吸血鬼幸存者和星铁活动资料复刻一个基于pixi的小游戏。\n\n进度：\n [x] 基础的怪物数据\n [x] 怪物基础逻辑\n - [x] 被击退\n - [x] 伤害玩家\n - [x] 向玩家移动的行为\n - [x] 受到伤害，死亡掉落经验球\n - [x] 经验球可拾取\n - [x] 拾取时的加速度效果\n - [ ] 固定移动行为\n - [ ] 特殊个体\n - [ ] 不同的怪物种类与数据设计\n [x]玩家\n - [x] 方向键移动\n - [x] 受伤\n - [ ] 升级\n - [ ] 特殊技能\n - [ ] 多个角色的设计，和他们不同的特殊能力\n [x] 武器\n - [x] 基础武器循环\n - [x]可升级\n - [x]可在怪物间弹跳的雷电荆棘\n - [x] 闪电特效绘制\n - [ ] 投射物\n - [ ] 风暴之弓\n - [ ] 还原其他活动内设定武器\n - [ ] 武器进化\n - [ ] 被动装备\n [x] UI\n - [x] 升级界面复刻\n - [ ] 游戏开始菜单\n - [ ] 金币升级机制和菜单\n - [ ] 暂停菜单\n - [ ] UI状态控制\n - [ ] 结算画面与元素\n - [ ] 游戏内反馈\n - [ ] 过关界面\n - [ ] 其他可能的地方\n\n suspend: lack of motivation"
+    },
+    {
+      "status": "suspend",
+      "type": "epic",
+      "key": "game-operation",
+      "title": "一款发行游戏的游戏",
+      "description": "灵感来源于从事游戏运营工作的朋友的痛苦。\n\n界面模仿《请不要喂食猴子》《请出示证件》《Hacknet》等游戏，让玩家在一个固定的“系统”中处理发来的邮件、聊天、专用的论坛相关内容爬虫软件，根据对应请求，按照情绪倾向回复内容，推进可发行的游戏项目、一些游戏外包工作、游戏活动和舆情监管。\n\n进度：\n [x] 游戏开始界面\n [x] 邮件展示界面\n [x] 第一封入职邮件\n [x] 还原微信的对话UI设计，支持群聊\n [ ] 综合论坛主题帖、瀑布流界面\n [ ] 第一个游戏项目流程（内容新手引导），完整游戏流程\n [ ] 类似敏捷日程表的日历界面\n [ ]至少五个（一小时左右）的游戏内容体验\n\n\n suspend: 灵感枯竭，想象不出第一个完整的游戏流程"
+    },
+    {
+      "status": "suspend",
+      "type": "legendary",
+      "key": "cyber-farming",
+      "title": "赛博种菜-买菜",
+      "description": "与朋友合作的线下-线上多媒体项目，每位用户一个小菜园，可自己购买种子、抽卡种子，通过直播的方式进行种菜。菜园由公司雇员管理，收获的果实可以邮寄给用户。\n\n线上以游戏的形式进行交互，种下种子并收获食材，用于饭馆游戏的经营。\n\ncons：考虑到种菜超长的投入反馈周期，游戏必须能够照顾玩家们的娱乐投入，需要足够快的收获来留住玩家，并且尽可能记录植物的生长以让玩家感觉到“我种的菜每天都有变化”，以提供娱乐消费。\n\n玩家可以形成社区，进行食材的交换以扩展自己可以制作的食谱，晒出自己的料理。利用社交媒体进行传播。\n\npros：\n - 利用农村低廉的成本和城市娱乐消费差额来获取利润\n - 协助朋友农产品供应商卖一些额外的商品。\n - 小农业工业流程化、信息数据化、部分自动化实践。\n - 科普农业知识，离开城市的一条出路。\n\n\n suspend: 正在联络供应商，卡在人脉节点中。"
+    }
+  ],
+  "todo": [
+    {
+      "status": "todo",
+      "type": "epic",
+      "key": "be-agile",
+      "title": "线上开源敏捷开发合作平台框架",
+      "description": "将一个完整的项目依据敏捷原则分割为较小的故事块，放在平台上自由接单开发。\n\n提供给想要提升水平、积攒经验的学生或者初级工程师，积累经验，优化代码风格，学习git和合作开发，工程化写法等。\n\n每个故事块小于2天，控制在1000行代码以内，关联到pr，由GPT做Review，也可以邀请专业大佬review。形成良性的老带新社区。\n\n按照故事块的故事点进行报酬结算，review的大佬也能够获得回报。可以社区内发行虚拟货币进行结算。有一些带有预算的项目也可以拆进去，同样按照相关故事点（平均工期）进行结算，给写代码者一些劳务回报。"
+    },
+    {
+      "status": "todo",
+      "type": "epic",
+      "key": "slime-bar",
+      "parent": "cyber-farming",
+      "title": "在孤岛上开饭店招待异世界客人、培育食材的游戏",
+      "description": "扮演一只人畜无害的史莱姆，根据抽卡获得的种子培养食材，充分利用食材的所有部位，做出意想不到的料理招待客人的游戏。\n\n给客人设定不同的种族、性格作为提示词描述，根据完成的料理生成对应的提示词描述，让GPT扮演顾客做出平价，保证游戏的多样性。NPC和对应的经历交由GPT进行提示词压缩，形成顾客的记忆、印象并保存存档。\n\n尽可能向玩家传递种菜和把自己的菜做成饭给其他人吃的美妙。"
+    },
+    {
+      "status": "todo",
+      "type": "story",
+      "key": "sustainability",
+      "title": "将存款变成更有效的资产",
+      "description": "想点子，找项目"
+    }
+  ],
+  "working": [
+    {
+      "status": "working",
+      "type": "story",
+      "parent": "be-agile",
+      "key": "agile-dom-elements",
+      "title": "故事卡与故事板",
+      "description": "[x] story book styling element\n - [x] story card, columns, board\n - [ ] draggable node\n - [ ] stable and extendable data fields\n - [ ] embedding elements\n - [ ] Gallary View\n - [ ] Filters"
+    },
+    {
+      "status": "working",
+      "type": "story",
+      "key": "web-resume",
+      "title": "网页简历",
+      "description": "派生自be-agile, 可以用敏捷看板的方式展示自己的技能、经历等信息。用于个人展示\n\n\n顺便完成一下个人建站的久远的梦想。"
+    }
+  ],
+  "done": [
+    {
+      "status": "done",
+      "type": "story",
+      "key": "vercel publish",
+      "title": "publish site to vercel",
+      "description": "deploy site to my domain"
+    }
+  ]
+}

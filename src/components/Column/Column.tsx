@@ -21,10 +21,12 @@ const Container = styled.div`
   gap: 0.4rem;
   padding: 1rem;
   border-radius: 1rem;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
 `;
 
 const Header = styled.div`
   display: flex;
   color: #58647a;
   font-size: 0.6rem;
+  font-weight: 600;
 `;
