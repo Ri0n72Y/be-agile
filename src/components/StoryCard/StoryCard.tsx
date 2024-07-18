@@ -4,8 +4,8 @@ import { hex2rgba } from "../../utils";
 export interface StoryCardProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;
   description: string;
-  status: StatusType;
-  type: CardType;
+  status: StatusType | ({} & string);
+  type: CardType | ({} & string);
 }
 
 export type CardType = "legendary" | "epic" | "story" | "task";
@@ -32,11 +32,14 @@ export function StoryCardComponent({
   return (
     <Container
       {...props}
-      style={{ backgroundColor: hex2rgba(colors[status], 1), ...props.style }}
+      style={{
+        backgroundColor: hex2rgba(colors[status as StatusType], 1),
+        ...props.style,
+      }}
     >
       <Title>{title}</Title>
       <Desc>{description}</Desc>
-      <SideBar style={{ backgroundColor: colors[type] }} />
+      <SideBar style={{ backgroundColor: colors[type as CardType] }} />
     </Container>
   );
 }
