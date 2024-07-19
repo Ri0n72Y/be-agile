@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 interface ColumnProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;
-  children?: React.ReactNode;
 }
 export function ColumnComponent({ title, children }: ColumnProps) {
   return (

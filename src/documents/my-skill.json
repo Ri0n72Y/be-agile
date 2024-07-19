@@ -1,0 +1,135 @@
+{
+  "competent": [
+    {
+      "status": "done",
+      "type": "epic",
+      "key": "react",
+      "title": "✨ React@^18",
+      "description": " - functional and pure-component fanatic\n - no more life-cycle and useEffect\n - declarative programming >> imperative\n - lazy loading\n - data - render separation"
+    },
+    {
+      "status": "done",
+      "type": "epic",
+      "key": "agile-engineering",
+      "title": "Jira, 飞书文档, Figma/FigJam, ✨ Agile Kanban anywhere",
+      "description": " - great workflow user, agile fanatic\n - Kanban >> Scrum, but scrum is better for non-tech bosses\n - love jira but hate the UI\n - love 飞书UI but hate the api docs and its closed data management\n - FigJam is good, but lack of compatibility\n - flex working base on Storypoint!\n - learing JQL, reading docs"
+    },
+    {
+      "status": "done",
+      "type": "task",
+      "key": "react-state",
+      "title": "✨ useReducer@^18, Mobx@^6.9, ✨ Zustand@^4.5",
+      "description": " - primitive state-context management\n - divide state into different hooks/store\n - mobx observer - dislike it :(\n - zustand global is good!"
+    },
+    {
+      "status": "done",
+      "type": "task",
+      "key": "styled-components",
+      "title": "✨ styled-components@^6, css-modules",
+      "description": " - pro inline styles, separated files for reuse only\n - style - function separation\n - static style > dynamic style\n - quick dose of dopamine"
+    },
+    {
+      "status": "done",
+      "type": "task",
+      "key": "sibling-portal",
+      "title": "React Portal",
+      "description": " - I'm Loving It\n - for many sibling components"
+    }
+  ],
+  "experienced": [
+    {
+      "status": "working",
+      "type": "story",
+      "key": "three-js",
+      "title": "Three.js, ✨ react-three-fiber@^6.0, @react-three/drei@^9.0",
+      "description": " - scene rendering & building\n - external data management\n - shading and material\n - basic interactive"
+    },
+    {
+      "status": "done",
+      "type": "story",
+      "key": "html",
+      "title": "HTML, CSS, ✨ JavaScript@^18, node.js",
+      "description": " - basic and foundimental\n - no-need to write for tech recruiters, this is writen for keyword search by hr"
+    },
+    {
+      "status": "working",
+      "type": "story",
+      "key": "chatgpt",
+      "title": "LLM Prompting, workflow building",
+      "description": " - Prompt structrual building for expert task\n - project base on openai-api\n - standalone base on ollama and dify\n - knowledge compression, embedding and retrieval\n - learning fine-tuning"
+    },
+    {
+      "status": "suspend",
+      "type": "task",
+      "key": "antvx6",
+      "title": "AntV-x6@^2.x",
+      "description": " - used to develop a beautiful and strong-interactive flow diagram\n - not friendly to react =(\n - implement a 'react-x6' using effect\n - implement a native dom version, much better for developer mental health"
+    },
+    {
+      "status": "todo",
+      "type": "story",
+      "key": "python",
+      "title": "✨ Python as Data Sciencist, FastApi@latest",
+      "description": " - used as a micro-web-service handler \n - restful & websocket\n - seeking for modern engineering architecture\n - \n - data processing, pre & post"
+    }
+  ],
+  "used": [
+    {
+      "status": "working",
+      "type": "story",
+      "key": "storybook",
+      "title": "✨ Storybook to manage UI&Component Library",
+      "description": " - solid in writing reliable and extendable components. \n - isolate data componnet and view component\n - self-document code naming\n - flat architecture"
+    },
+    {
+      "status": "working",
+      "type": "task",
+      "key": "react-spring",
+      "title": "css animations, ✨ React-Spring Animations",
+      "description": " - Spring base on keyframes\n - transition and chain\n - highly interactive\n - low reliability"
+    },
+    {
+      "status": "todo",
+      "type": "task",
+      "key": "vite",
+      "title": "vite as build tool",
+      "description": " - vite & npm & yarn as packaging tool"
+    },
+    {
+      "status": "working",
+      "type": "task",
+      "key": "pixijs",
+      "title": "pixi.js, ✨ react-pixi@^6.0",
+      "description": " - sprite animation\n - interaction\n - self-document code naming\n - react style prefer"
+    },
+    {
+      "status": "todo",
+      "type": "task",
+      "key": "golang",
+      "title": "golang, ✨ gin/gomod@latest",
+      "description": " - web/websocket service\n - if err != nil { return nil, err }"
+    },
+    {
+      "status": "todo",
+      "type": "task",
+      "key": "k8s",
+      "title": "docker, ✨ k8s",
+      "description": " - minikube for single node&master\n - small image for micro-service"
+    },
+    {
+      "status": "todo",
+      "type": "task",
+      "key": "haskell",
+      "title": "Haskell, ✨ functional programming",
+      "description": " - focus on lazy evaluation, pure & side-effect\n - learnt haskell as first programming language in University"
+    },
+    {
+      "status": "suspend",
+      "type": "task",
+      "key": "swr",
+      "title": "SWR, SWR based data sync & cache",
+      "description": " - used in work\n - basic features used: infinity, pagination, preload, auto revalidate, mutate, etc."
+    }
+  ],
+  "seeking": []
+}

@@ -1,26 +1,6 @@
 import styled from "styled-components";
 import { hex2rgba } from "../../utils";
-
-export interface StoryCardProps extends React.HTMLAttributes<HTMLDivElement> {
-  title: string;
-  description: string;
-  status: StatusType | ({} & string);
-  type: CardType | ({} & string);
-}
-
-export type CardType = "legendary" | "epic" | "story" | "task";
-export type StatusType = "todo" | "suspend" | "working" | "done";
-
-const colors = {
-  todo: "#eff0f0",
-  suspend: "#ffeeee",
-  working: "#e8ebf4",
-  done: "#e0f5de",
-  legendary: "#FEB207",
-  epic: "#7C2FDB",
-  story: "#54B02E",
-  task: "#3E9CE2",
-} as const;
+import { StoryCardProps, colors, StatusType, CardType } from "./common";
 
 export function StoryCardComponent({
   type,
@@ -34,11 +14,12 @@ export function StoryCardComponent({
       {...props}
       style={{
         backgroundColor: hex2rgba(colors[status as StatusType], 1),
+        ...(!description ? { height: "auto" } : {}),
         ...props.style,
       }}
     >
       <Title>{title}</Title>
-      <Desc>{description}</Desc>
+      {!!description && <Desc>{description}</Desc>}
       <SideBar style={{ backgroundColor: colors[type as CardType] }} />
     </Container>
   );
@@ -59,6 +40,15 @@ const Container = styled.div`
   padding: 0.4rem 1rem;
   gap: 0.6rem;
   overflow: hidden;
+  cursor: pointer;
+  opacity: 0.6;
+  transition:
+    opacity,
+    0.15s ease-out;
+
+  &:hover {
+    opacity: 1;
+  }
 `;
 
 const Title = styled.div`

@@ -1,0 +1,7 @@
+# antv X6 图形库的 react 组件化尝试。
+
+目前采用的方案是通过effect组件生命周期的方式，更新需要被整合的同类数据到父节点的loader中，由loader基于effect统一装载卸载更新，从而达到与jsx的声明式写法习惯较为贴合的状态。有一些更清晰彻底的思路来避免使用effect和其他负担较重的react行为：
+
+r3f/react-three-fiber应用场景和这个类似，都是将一个指令式的基础库封装为react的广泛用法。r3f的方案是通过声明primitive组件收集数据，在renderer中整合数据对象，并根据id将其变化以最低成本更新到自己的3D-canvas对象中去，能够获得对jsx和react最好的兼容性，达到同原生threejs几乎完全相同的性能
+
+rpx/react-pixi的方法类似，由hoc组件作为props输入，建立对象ref后不再变动，仅考虑在props变更时将change变为true（标记为dirty），然后执行draw方法进行重绘。但实现比较偏低层https://github.com/pixijs/pixi-react/blob/master/packages/react/src/components/Sprite.js

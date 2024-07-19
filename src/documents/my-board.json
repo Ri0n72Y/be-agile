@@ -41,6 +41,20 @@
   "todo": [
     {
       "status": "todo",
+      "type": "task",
+      "key": "story-card-mdx-adaption",
+      "title": "故事卡兼容mdx格式",
+      "description": ""
+    },
+    {
+      "status": "todo",
+      "type": "task",
+      "key": "story-card-mdx-adaption",
+      "title": "故事卡可以拖动改变顺序",
+      "description": "对应的数据结构store + 可导入/导出为json"
+    },
+    {
+      "status": "todo",
       "type": "epic",
       "key": "be-agile",
       "title": "线上开源敏捷开发合作平台框架",
