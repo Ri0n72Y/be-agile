@@ -5,7 +5,7 @@ import { StoryCardComponent } from "../../components/StoryCard";
 import { StoryCardProps } from "../../components/StoryCard/common";
 import { StoryCardDialog } from "../../components/StoryCard/StoryCardDialog";
 import docs from "../../documents/my-board.json";
-import { BoardComponent } from "./styles";
+import { BoardComponentStyle } from "../../components/Board/styles";
 import styled from "styled-components";
 
 interface Props {
@@ -22,32 +22,32 @@ export function Idea({
 }: Props) {
   const [dialog, setDialog] = useState<StoryCardProps>();
   return (
-    <BoardComponent>
+    <BoardComponentStyle>
       {done && (
         <Column title="🎉做完了">
           {docs.done.map((e) => (
-            <Story {...e} onClick={() => setDialog(e)} />
+            <Story key={e.keyword} {...e} onClick={() => setDialog(e)} />
           ))}
         </Column>
       )}
       {working && (
         <Column title="😎在做了">
           {docs.working.map((e) => (
-            <Story {...e} onClick={() => setDialog(e)} />
+            <Story key={e.keyword} {...e} onClick={() => setDialog(e)} />
           ))}
         </Column>
       )}
       {todo && (
         <Column title="✒️先写着">
           {docs.todo.map((e) => (
-            <Story {...e} onClick={() => setDialog(e)} />
+            <Story key={e.keyword} {...e} onClick={() => setDialog(e)} />
           ))}
         </Column>
       )}
       {suspend && (
         <Column title="⏳卡住了">
           {docs.suspend.map((e) => (
-            <Story {...e} onClick={() => setDialog(e)} />
+            <Story key={e.keyword} {...e} onClick={() => setDialog(e)} />
           ))}
         </Column>
       )}
@@ -56,7 +56,7 @@ export function Idea({
           <StoryCardDialog {...dialog} onClose={() => setDialog(undefined)} />
         </DialogWrapper>
       )}
-    </BoardComponent>
+    </BoardComponentStyle>
   );
 }
 

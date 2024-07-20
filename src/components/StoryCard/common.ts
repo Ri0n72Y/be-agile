@@ -1,5 +1,7 @@
 export interface StoryCardProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;
+  parent?: string;
+  keyword?: string;
   description: string;
   status: StatusType | NonNullable<string>;
   type: CardType | NonNullable<string>;

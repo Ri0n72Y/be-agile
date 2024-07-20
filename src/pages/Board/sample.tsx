@@ -1,6 +1,6 @@
 import { ColumnComponent } from "../../components/Column";
 import { StoryCardComponent } from "../../components/StoryCard";
-import { BoardComponent } from "./styles";
+import { BoardComponentStyle } from "../../components/Board/styles";
 
 const data = {
   todo: [
@@ -43,7 +43,7 @@ const data = {
 
 export function SampleBoard() {
   return (
-    <BoardComponent>
+    <BoardComponentStyle>
       <ColumnComponent title="Suspend">
         {data.suspend.map((e) => (
           <StoryCardComponent {...e} />
@@ -64,6 +64,6 @@ export function SampleBoard() {
           <StoryCardComponent {...e} />
         ))}
       </ColumnComponent>
-    </BoardComponent>
+    </BoardComponentStyle>
   );
 }

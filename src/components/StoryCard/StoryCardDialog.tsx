@@ -9,6 +9,8 @@ export function StoryCardDialog({
   description,
   onClose,
   type,
+  status,
+  keyword,
   ...rest
 }: StoryCardProps & { onClose: () => void }) {
   return (
@@ -22,7 +24,11 @@ export function StoryCardDialog({
       <ContentWrapper>
         <Title>{title}</Title>
         <Summary>
-          <Markdown>{description}</Markdown>
+          <Markdown
+            components={{ a: (props) => <a target="_blank" {...props} /> }}
+          >
+            {description}
+          </Markdown>
         </Summary>
       </ContentWrapper>
       <SideBar style={{ backgroundColor: colors[type as CardType] }} />

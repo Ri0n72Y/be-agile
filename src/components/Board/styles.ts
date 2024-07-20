@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const BoardComponent = styled.div`
+export const BoardComponentStyle = styled.div`
   position: relative;
   display: flex;
   gap: 1rem;
@@ -8,6 +8,7 @@ export const BoardComponent = styled.div`
   border-radius: 2rem;
   background-color: #fafaf9;
   width: fit-content;
+  flex-wrap: wrap;
 
   @media screen and (max-width: 960px) {
     flex-direction: column;

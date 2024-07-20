@@ -7,6 +7,8 @@ export function StoryCardComponent({
   status,
   title,
   description,
+  keyword,
+  parent,
   ...props
 }: StoryCardProps & { $cardSize?: number }) {
   const color = hex2rgba(colors[status as StatusType], 1);
@@ -15,13 +17,18 @@ export function StoryCardComponent({
       {...props}
       style={{
         backgroundColor: color,
-        ...(!description ? { height: "auto" } : {}),
+        ...(!description ? { height: "auto", cursor: "default" } : {}),
         ...props.style,
       }}
+      onClick={(e) => !!description && props.onClick?.(e)}
     >
       <Title>{title}</Title>
-      {!!description && <Desc>{description}</Desc>}
-      <Gradient $color={color} />
+      {!!description && (
+        <>
+          <Desc>{description}</Desc>
+          <Gradient $color={color} />
+        </>
+      )}
       <SideBar style={{ backgroundColor: colors[type as CardType] }} />
     </Container>
   );

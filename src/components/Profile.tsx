@@ -38,7 +38,7 @@ export function Profile() {
         </SkillContainer>
         <SkillContainer>
           <Circle size={ringSize} progress={0.5} label="Agile" />
-          <Circle size={ringSize} progress={0.8} label="Steam" />
+          <Circle size={ringSize} progress={0.8} label="M-ist" />
           <Circle size={ringSize} progress={1} label="Sincere" />
         </SkillContainer>
       </SubContainer>

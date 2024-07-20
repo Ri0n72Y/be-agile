@@ -6,7 +6,7 @@ import { StoryCardProps } from "../../components/StoryCard/common";
 import { StoryCardDialog } from "../../components/StoryCard/StoryCardDialog";
 import docs from "../../documents/my-skill.json";
 import { useMedia } from "../../utils/useMedia";
-import { BoardComponent } from "./styles";
+import { BoardComponent } from "../../components/Board";
 
 const Large = 300 as const;
 const Small = 240 as const;
@@ -14,12 +14,15 @@ export function Skill() {
   const [dialog, setDialog] = useState<StoryCardProps>();
   const media = useMedia("(max-width: 960px)");
   return (
-    <BoardComponent style={{ color: "#2e343f" }}>
+    <BoardComponent
+      style={{ color: "#2e343f" }}
+      boardTitle="💻 My Professional Skills"
+    >
       <ColumnComponent title="💼 Competent At...">
         {docs.competent.map((e) => (
           <StoryCardComponent
             {...e}
-            key={e.key}
+            key={e.keyword}
             $cardSize={media ? Small : Large}
             onClick={() => setDialog(e)}
           />
@@ -29,7 +32,7 @@ export function Skill() {
         {docs.experienced.map((e) => (
           <StoryCardComponent
             {...e}
-            key={e.key}
+            key={e.keyword}
             $cardSize={media ? Small : Large}
             onClick={() => setDialog(e)}
           />
@@ -39,7 +42,7 @@ export function Skill() {
         {docs.used.map((e) => (
           <StoryCardComponent
             {...e}
-            key={e.key}
+            key={e.keyword}
             $cardSize={media ? Small : Large}
             onClick={() => setDialog(e)}
           />
