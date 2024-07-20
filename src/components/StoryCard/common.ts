@@ -1,8 +1,8 @@
 export interface StoryCardProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;
   description: string;
-  status: StatusType | ({} & string);
-  type: CardType | ({} & string);
+  status: StatusType | NonNullable<string>;
+  type: CardType | NonNullable<string>;
 }
 
 export type CardType = "legendary" | "epic" | "story" | "task";

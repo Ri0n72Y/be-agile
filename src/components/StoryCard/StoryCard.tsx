@@ -8,28 +8,40 @@ export function StoryCardComponent({
   title,
   description,
   ...props
-}: StoryCardProps) {
+}: StoryCardProps & { $cardSize?: number }) {
+  const color = hex2rgba(colors[status as StatusType], 1);
   return (
     <Container
       {...props}
       style={{
-        backgroundColor: hex2rgba(colors[status as StatusType], 1),
+        backgroundColor: color,
         ...(!description ? { height: "auto" } : {}),
         ...props.style,
       }}
     >
       <Title>{title}</Title>
       {!!description && <Desc>{description}</Desc>}
+      <Gradient $color={color} />
       <SideBar style={{ backgroundColor: colors[type as CardType] }} />
     </Container>
   );
 }
 
+const Gradient = styled.div<{ $color?: string }>`
+  position: absolute;
+  bottom: 0.4rem;
+  left: 0;
+  width: 100%;
+  height: 3rem;
+  background: ${({ $color }) =>
+    `linear-gradient(0deg, ${$color || "#ffffff"} 0%, #00000000 100%)`};
+`;
+
 const CARD_SIZE = 200;
-const Container = styled.div`
+const Container = styled.div<{ $cardSize?: number }>`
   position: relative;
-  width: ${CARD_SIZE}px;
-  height: ${CARD_SIZE * 0.618}px;
+  width: ${({ $cardSize = CARD_SIZE }) => $cardSize}px;
+  height: ${({ $cardSize = CARD_SIZE }) => $cardSize * 0.6}px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -42,9 +54,11 @@ const Container = styled.div`
   overflow: hidden;
   cursor: pointer;
   opacity: 0.6;
+  flex-shrink: 0;
   transition:
-    opacity,
-    0.15s ease-out;
+    opacity 0.15s ease-out,
+    width 0.3s ease-out,
+    height 0.3s ease-out;
 
   &:hover {
     opacity: 1;

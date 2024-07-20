@@ -8,4 +8,11 @@ export const BoardComponent = styled.div`
   border-radius: 2rem;
   background-color: #fafaf9;
   width: fit-content;
+
+  @media screen and (max-width: 960px) {
+    flex-direction: column;
+    width: 100%;
+    min-width: 560px;
+    margin: 2rem 2rem;
+  }
 `;

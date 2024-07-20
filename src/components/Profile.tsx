@@ -1,37 +1,56 @@
 import styled from "styled-components";
 import { Circle } from "./Progress/Circle";
+import { useMedia } from "../utils/useMedia";
+import { useMemo } from "react";
+import { useCssRemSize } from "../utils/useCssRemSize";
 
 export function Profile() {
+  const rem = useCssRemSize();
+  const bold = useMedia("(max-width: 960px)");
+  const thin = useMedia("(max-width: 768px)");
+  const narrow = useMedia("(max-width: 572px)");
+  const ringSize = useMemo(() => {
+    if (narrow) return 4 * rem;
+    if (thin) return 6 * rem;
+    if (bold) return 8 * rem;
+    return 4 * rem;
+  }, [bold, narrow, rem, thin]);
   return (
     <Wrapper>
-      <Icon
-        src="https://avatars.githubusercontent.com/u/16500109?v=4&size=128"
-        alt="Icon"
-      />
-      <Text>
-        Ziyu "Rion" Tao
-        <br />
-        <Sub>Software Engineer</Sub>
-        <br />
-        <Third>Undergraduate: ANU</Third>
-      </Text>
-      <SkillContainer>
-        <Circle progress={0.6} label="JSX" />
-        <Circle progress={0.9} label="TS" />
-        <Circle progress={0.2} label="Python" />
-      </SkillContainer>
-      <SkillContainer>
-        <Circle progress={0.5} label="Agile" />
-        <Circle progress={0.8} label="Steam" />
-        <Circle progress={1} label="Sincere" />
-      </SkillContainer>
+      <SubContainer>
+        <Icon
+          src="https://avatars.githubusercontent.com/u/16500109?v=4&size=128"
+          alt="Icon"
+        />
+        <Text>
+          Ziyu "Rion" Tao
+          <br />
+          <Sub>Software Engineer</Sub>
+          <br />
+          <Third>Undergraduate: ANU</Third>
+        </Text>
+      </SubContainer>
+      <SubContainer>
+        <SkillContainer style={{ marginBottom: "0.4rem" }}>
+          <Circle size={ringSize} progress={0.6} label="JSX" />
+          <Circle size={ringSize} progress={0.9} label="TS" />
+          <Circle size={ringSize} progress={0.2} label="Python" />
+        </SkillContainer>
+        <SkillContainer>
+          <Circle size={ringSize} progress={0.5} label="Agile" />
+          <Circle size={ringSize} progress={0.8} label="Steam" />
+          <Circle size={ringSize} progress={1} label="Sincere" />
+        </SkillContainer>
+      </SubContainer>
     </Wrapper>
   );
 }
 
+const SubContainer = styled.div``;
+
 const SkillContainer = styled.div`
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
   font-size: 0.8rem;
   padding: 0.3rem;
 `;
@@ -73,8 +92,21 @@ const Wrapper = styled.div`
   padding: 1rem;
   background-color: rgb(39, 33, 46);
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 960px) {
     position: relative;
+    width: fit-content;
+    flex-direction: row;
+    padding-bottom: 1rem;
+    gap: 2rem;
+    height: fit-content;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1rem;
+    justify-content: space-around;
+  }
+
+  @media screen and (max-width: 572px) {
+    position: relative;
+    flex-direction: column;
     width: 16rem;
     padding-bottom: 2rem;
     height: fit-content;

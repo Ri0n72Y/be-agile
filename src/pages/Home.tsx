@@ -2,13 +2,17 @@ import styled from "styled-components";
 import github from "../assets/github.svg";
 import { Profile } from "../components/Profile";
 import { Skill } from "./Board/skill";
+import { Idea } from "./Board";
+import { useMedia } from "../utils/useMedia";
 
 export function Home() {
+  const isLargeScreen = useMedia("(min-width: 1440px)");
   return (
     <Container>
       <Title>Ri0n72Y's Profile</Title>
       <Profile />
       <Skill />
+      <Idea todo={isLargeScreen} suspend={isLargeScreen} />
       <SideTools />
     </Container>
   );
@@ -22,11 +26,12 @@ const Container = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
+  gap: 2rem;
   min-height: 100%;
   padding: 2rem;
   margin-left: 16rem;
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 960px) {
     align-items: center;
     width: 100vw;
     margin-left: 0;
@@ -67,12 +72,13 @@ const SideToolsContainer = styled.div`
   background-color: #f5f6f7;
   border-radius: 2rem 0 0 2rem;
   transition: right 0.3s cubic-bezier(0, 0, 0.2, 1.2);
+  filter: drop-shadow(0px 0px 2px #cfcfcf);
 
   &:hover {
     right: -1rem;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 960px) {
     top: 4rem;
     right: -1rem;
   }
